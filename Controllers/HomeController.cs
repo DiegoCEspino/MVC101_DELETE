@@ -27,7 +27,8 @@ public class HomeController : Controller
     {
         ViewData["author"] = "Jane Bond";
         ViewBag.Date = DateTime.Now;
-        return View();
+        string[] days = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+        return View(days);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
